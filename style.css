@@ -1,0 +1,475 @@
+:root {
+	--color-h2-p: #2E2E3A;
+	--bd-radius: .7rem;
+	--bgc-lg-header: linear-gradient(90deg, #5D5DFC, #B5B5F9, #5D5DFC);
+	--bgc-lg-modal: linear-gradient(90deg, #B5B5F9, #5D5DFC, #B5B5F9);
+	--bgc-lg-modal-btn: linear-gradient(90deg, #4C4CEB, #A4A4E8, #4C4CEB);
+	--bgc-lg-modal-btn-active: linear-gradient(90deg, #3B3BDA, #9393D7, #3B3BDA);
+	--bgc-lg-modal-btn-hover: linear-gradient(90deg, #2A2AC9, #8282C6, #2A2AC9);
+	--bgc-white: #fcfcfc;
+	--bx-sh-header: 0 1px 8px 2px #2E2E3A; 	
+	--bx-sh-content-game: 0px 4px 5px 1px #2E2E3A;
+	--ff-btn: 'Raleway', sans-serif;
+	--ff-header: 'Bebas Neue', sans-serif;
+	--ff-select-game: 'Rajdhani', sans-serif;;
+}
+
+svg {
+	height: 1rem;
+	width: 1rem;
+}
+
+body {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.flex-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.header {
+	align-items: center;
+	background: var(--bgc-lg-header);
+	box-shadow: var(--bx-sh-header);
+	display: flex;
+	height: 10vh;
+	justify-content: space-between;
+	padding: 0 5rem;
+	z-index: 100;
+}
+
+.header > h2 {
+	color: var(--color-h2-p);
+	cursor: default;
+	font-family: var(--ff-header);
+	font-size: 4vw;
+	margin: .2rem 0;
+}
+
+/*///////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////////*/
+
+.game-container {
+	align-items: center;
+	background-color: #ccc;
+	display: flex;
+	justify-content: center;
+	height: 100%;
+	position: fixed;
+	width: 100vw;
+}
+
+.game-container > .names-container-one {
+	align-items: center;
+	display: flex;
+	color: var(--color-h2-p);
+	cursor: default;
+	font-family: var(--ff-header);
+	flex-direction: column;
+	font-size: 4vw;
+	justify-content: center;
+	position: absolute;
+	left: 7vw;
+	top: 44vh;
+}
+
+.game-container > .names-container-one > p.name-player-one, 
+.game-container > .names-container-two > p.name-player-two {
+	margin: 0;
+}
+
+.game-container > .names-container-two {
+	align-items: center;
+	display: flex;
+	color: var(--color-h2-p);
+	cursor: default;
+	font-family: var(--ff-header);
+	flex-direction: column;
+	font-size: 4vw;
+	justify-content: center;
+	position: absolute;
+	right: 7vw;
+	top: 44vh;
+}
+
+.game-container-intern {
+	display: flex;
+	background-color: var(--bgc-white);
+	border: 1px solid #000;
+	border-radius: var(--bd-radius);
+	box-shadow: var(--bx-sh-content-game);
+	font-family: var(--ff-select-game);
+	flex-direction: column;
+	height: 70%;
+	margin: 1.3rem 0 0 0;
+	position: relative;
+	width: 50%;
+}
+
+
+.game-selector {
+	display: flex;
+	height: 10%;
+	justify-content: space-between;
+	padding: 1.6rem 1rem 0;
+}
+
+.choose-name {
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.choose-name > span {
+	display: flex;
+	flex-direction: column;
+}
+
+.choose-name > span > label {
+	color: #2E2E3A;
+	display: flex;
+	justify-content: center;
+}
+
+.choose-name > span > input[type=text] {
+	border-bottom: 2px outset #2E2E3A;
+	border-left: 2px outset transparent;
+	border-right: 2px outset transparent;
+	border-top: 2px outset transparent;
+	color: #2E2E3A;
+	font-family: var(--ff-select-game);
+	outline: none;
+	transition: all .2s ease-in-out;
+	width: 8rem;
+}
+
+.choose-name > span > input[type=text]:hover {
+	transform: scale(1.1);
+	outline: none;
+}
+
+.choose-name > span > input[type=text]:focus {
+	border-bottom: 2px outset #2E2E3A;
+	border-left: 2px outset #2E2E3A;
+	border-right: 2px outset #2E2E3A;
+	border-top: 2px outset #2E2E3A;
+	outline: none;
+	transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+/*///////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+
+
+.btn-container {
+	display: flex;
+	padding: 1.6rem 1rem 0;
+	height: 7%;
+	justify-content: center;
+}
+
+.btn-container > button {
+	background-color: #ddd;
+	border: 1px outset transparent;
+	border-radius: var(--bd-radius);
+	cursor: pointer;
+	font-family: var(--ff-btn);
+	font-weight: bold;
+	font-size: 1.1rem;
+	margin: 0 1rem;
+	padding: .3rem;
+	transition: all .2s ease-in-out;
+	width: 100%;
+}
+
+.btn-container > button#choose-name {
+	align-items: center;
+	display: flex;
+	font-size: 100%;
+	justify-content: center;
+}
+
+.btn-container > button:hover {
+	background-color: #bbb;
+	transform: scale(1.1);
+}
+
+.btn-container > button:active {
+	background-color: #ccc;
+	transform: scale(1.05);
+}
+
+
+
+
+
+
+
+/*///////////////////////////////////////////////////////////////*/
+
+
+
+
+
+.table-container {
+	align-items: center;
+	background-color: #5D5DFC;
+	display: flex;
+	font-family: var(--ff-btn);
+	height: 52%;
+	justify-content: center;
+	margin: 1.3rem 0 0 0;
+}
+
+.table-container > .game-table {
+	display: grid;
+	grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+	height: 90%;
+	width: 50%;
+}
+
+.table-container > .game-table > div {
+	align-items: center;
+	cursor: pointer;
+	display: flex;
+	font-size: 4vw;
+	justify-content: center;
+}
+
+.table-container > .game-table > .section2 {
+	border-left: 4px solid var(--color-h2-p);
+	border-right: 4px solid var(--color-h2-p);
+}
+
+.table-container > .game-table > .section4 {
+	border-bottom: 4px solid var(--color-h2-p);
+	border-top: 4px solid var(--color-h2-p);
+}
+
+.table-container > .game-table > .section5 {
+	border: 4px solid var(--color-h2-p);
+}
+
+.table-container > .game-table > .section6 {
+	border-bottom: 4px solid var(--color-h2-p);
+	border-top: 4px solid var(--color-h2-p);
+}
+
+.table-container > .game-table > .section8 {
+	border-left: 4px solid var(--color-h2-p);
+	border-right: 4px solid var(--color-h2-p);
+}
+
+
+
+
+
+
+
+/*///////////////////////////////////////////////////////////////*/
+
+
+
+
+
+
+.btn-restart-container {
+	align-items: center;
+	display: flex;
+	height: 16%;
+	justify-content: center;
+}
+
+.btn-restart-container > button {
+	border: none;
+	border-bottom-left-radius: var(--bd-radius);
+	border-bottom-right-radius: var(--bd-radius);
+	color: var(--color-h2-p);
+	font-family: var(--ff-btn);
+	font-size: 2rem;
+	height: 100%;
+	transition: all .1s ease-in-out;
+	width: 100%;
+}
+
+.btn-restart-container > button:hover {
+	background-color: #ccc;
+	font-size: 2.2rem;
+}
+
+.btn-restart-container > button:active {
+	background-color: #ddd;
+	font-size: 2.1rem;
+}
+
+
+/*///////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////////*/
+
+.footer {
+	align-items: center;
+	background: var(--bgc-lg-header);
+	border-top: 5px outset #2E2E3A;
+	bottom: 0;
+	color: #000;
+	display: flex;
+	font-size: 1.2rem;
+	height: 7vh;
+	justify-content: center;
+	left: 0;
+	position: fixed;
+	width: 100vw;
+}
+
+.footer > p {
+	align-items: center;
+	display: flex;
+	cursor: default;
+	margin: 0;
+}
+
+.footer > p > span.date {
+	margin: 0 .4rem;
+}
+
+.footer > p > svg {
+	height: 1.5rem;
+	margin: 0 .4rem;
+	width: 1.5rem;
+	transition: transform .3s ease-in-out;
+}
+
+.footer > p > svg:hover {
+	transform: rotate(360deg) scale(1.2);
+}
+
+
+
+
+
+
+
+/*///////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////////*/
+
+
+.modal-container {
+	align-items: center;
+	background-color: #fff;
+	display: flex;
+	font-family: var(--ff-header);
+	height: 100vh;
+	justify-content: center;
+	left: 0;
+	opacity: .5;
+	position: absolute;
+	top: 0;
+	width: 100vw;
+	z-index: 500;
+}
+
+.modal-ctn {
+	display: none;
+}
+
+.modal {
+	align-items: center;
+	background: var(--bgc-lg-modal);
+	border-left: ;
+	border: 5px outset var(--color-h2-p);
+	border-left: 6px outset #1B1B53;
+	border-radius: var(--bd-radius);
+	border-right: 5px outset #1B1B53;
+	display: flex;
+	flex-direction: column;
+	height: 47vh;
+	justify-content: center;
+	left: 30vw;
+	opacity: 1;
+	position: absolute;
+	top: 30vh;
+	transition: all .3s ease-in-out;
+	-webkit-animation-name: openModal;
+	-webkit-animation-duration: .3s;
+	animation-name: openModal;
+	animation-duration: .3s;
+	width: 40vw;
+	z-index: 600;
+}
+
+.my-modal {
+	display: none;
+}
+
+.modal:hover {
+	border-left: 5px outset var(--color-h2-p);
+	border-right: 6px outset #1B1B53;
+	transform: scale(1.05);
+}
+
+.modal > p {
+	color: var(--color-h2-p);
+	cursor: default;
+	font-size: 6vw;
+	position: relative;
+	bottom: 7vh;
+	opacity: 1;
+}
+
+.modal > button {
+	background: var(--bgc-lg-modal-btn);
+	border: 3px inset var(--color-h2-p);
+	border-radius: var(--bd-radius);
+	color: var(--color-h2-p);
+	font-family: var(--ff-header);
+	font-size: 3vw;
+	height: 8vh;
+	position: relative;
+	top: 3vh;
+	transition: all .2s ease-in-out;
+	width: 38vw;
+}
+
+.modal > button:hover {
+	background: var(--bgc-lg-modal-btn-hover);
+	border: 3px outset var(--color-h2-p);
+	font-size: 3vw;
+	transform: scale(1.02);
+}
+
+.modal > button:active {
+	background: var(--bgc-lg-modal-btn-active);
+	border: 3px outset var(--color-h2-p);
+	font-size: 3vw;
+	transform: scale(1.01);
+}
+
+@-webkit-keyframes openModal {
+	from {
+		top: -300px;
+		opacity: 0;
+	}
+	to {
+		top: 30vh;
+		opacity: 1;
+	}
+}
